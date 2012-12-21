@@ -148,6 +148,15 @@ function simpletest_example_matching_dmy($date){
 		}
 	}
 }
+function simpletest_example_is_even($num){
+	if(is_numeric($num)){
+		if($num & 1){
+			return false;
+		}
+		return true;
+	}
+	return null;
+}
 /**
  * @} End of "defgroup simpletest_example".
  */
