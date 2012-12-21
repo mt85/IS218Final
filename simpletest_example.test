@@ -143,4 +143,12 @@ class SimpletestUnitTestExampleTestCase extends DrupalUnitTestCase {
     $message = 'A valid date should return FALSE.';
     $this->assertFalse($result, $message);
   }
+  public function testSimpletestUnitTestValidTime(){
+	$result = simpletest_example_valid_time(NULL);
+	$this->assertFalse($result, 'Null Should return false.');
+	$result = simpletest_example_valid_time('');
+	$this->assertFalse($result, 'Empty value should return false.');
+	$result = simpletest_example_valid_time(time('h:m'));
+	$this->assertTrue($result, 'Valid time should return true.');
+  }
 }
