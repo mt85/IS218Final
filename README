@@ -1,0 +1,13 @@
+a. What is unit testing, how is it implemented, and why is it important?
+	Unit testing is testing the outcome of specific functions to make sure data is handle correctly regardless if it's accurate or not. In drupal it's implemented by the Testing modules and Simple Test by checking values with assertion. Different assertion functions check the returned value differently.
+	Unit testing is important because a function needs to be able to handle various use cases without the system breaking, by testing it ahead of time and repeatly verifies whether or not the function is complete.
+b. What is functional testing, how is it implemented, and why is it important?
+	Functional testing is testing whether things work. Meaning if certain pages go to certain pages or pages contain certain items or forms, though it's not limited to those examples. It is implemented by simulating a user using a bot which scans through the page and simulates interactions a user would perform. It is important because a site needs to make sure everything works together, goes to where it needs to go, and can handle sporadic clicking around without malfunctioning, hangingup, etc.
+c. What is the significance and usage of automated unit testing in software development?
+	The significance is speed and work. Automated testing prevents the need of having many testers to do the same thing and automation gets the job done a lot faster than a human would. Automation usually uses bots to simulate function calls and user interaction, and these bots can test a multitude of variations in no time. Time is money so time saved is money saved.
+d. Where would you commonly find automated unit testing implemented?  Can you find any documentation online that describes this and post a link to it?
+	Multi-developer projects typically and Drupal is one that comes to mind. All of it's functions are tested until more or less perfection. When many people are working on the same project everything needs to be verified multiple times due to possible discrepancies in code versions and many other reasons.
+	http://chicago2011.drupal.org/sessions/automated-testing-and-drupal
+	http://drupal.org/automated-testing
+e.  What is test driven development and how can it improve the management and quality of software projects.
+	Test driven development is a development cycle. It first uses an automated test that initially fails for a given function or feature. Then the developers try to create a minimalistic version of the function or feature before adding all the bells and whistles. This provides quick "just working" prototypes and if the core is working as intended then the extras should only make it more robust.
