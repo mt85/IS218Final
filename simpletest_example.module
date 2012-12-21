@@ -131,6 +131,23 @@ function simpletest_example_valid_time($time){
 	}
 	return true;
 }
+function simpletest_example_matching_dmy($date){
+	if(empty($date)){
+		return null;
+	}
+	else{
+		if($date == '00-00-00' || $date == '0000-00-00' || $date == '0000-00-00 00:00:00'){
+			return false;
+		}
+		else{
+			$check = explode("-", $date);
+			if($check[0] == $check[1] && $check[0] == $check[2]){
+				return true;
+			}
+			return false;
+		}
+	}
+}
 /**
  * @} End of "defgroup simpletest_example".
  */
