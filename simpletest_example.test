@@ -151,4 +151,15 @@ class SimpletestUnitTestExampleTestCase extends DrupalUnitTestCase {
 	$result = simpletest_example_valid_time(time('h:m'));
 	$this->assertTrue($result, 'Valid time should return true.');
   }
+  public function testSimpletestUnitTestMatchingDMY(){
+	$result = simpletest_example_matching_dmy(null);
+	$this->assertNotNull($result, 'Null returns not null.');
+	$this->assertNull($result, 'Null returns null.');
+	$result = simpletest_example_matching_dmy('00-00-00');
+	$this->assertFalse($result, 'Blank date should return false');
+	$result = simpletest_example_matching_dmy(date('d-m-y'));
+	$this->assertFalse($result, 'Today doesn\'t have matching d-m-y, return false');
+	$result = simpletest_example_matching_dmy('12-12-12');
+	$this->assertTrue($result, '12-12-12 has matching d-m-y, return true.');
+  }
 }
