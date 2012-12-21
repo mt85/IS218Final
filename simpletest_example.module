@@ -125,7 +125,12 @@ function simpletest_example_empty_mysql_date($date_string) {
   }
   return false;
 }
-
+function simpletest_example_valid_time($time){
+	if(empty($time) || $time == "00:00"){
+		return false;
+	}
+	return true;
+}
 /**
  * @} End of "defgroup simpletest_example".
  */
